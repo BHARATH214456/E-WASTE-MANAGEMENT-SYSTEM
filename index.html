@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltCycle | Smart E-Waste Management & Circular Tech Platform</title>
+  <meta name="description"
+    content="Science-backed e-waste management web platform combining HTML5, CSS3, and modern JavaScript. 5 core features: Problem Home, Recyclable Guide, Verified Drop-off Centres, Doorstep Pickup Intake, and Real-Time Impact Dashboard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Top Announcement Banner: Pure Web Engineering Stack -->
+  <aside class="top-announcement" id="topAnnouncement">
+    <div class="announcement-content">
+      <span class="badge-pill">Web Trifecta Architecture</span>
+      <span>Combined coding languages: <strong>HTML5</strong> (Semantic Structure) &bull; <strong>CSS3</strong>
+        (Glassmorphism & Variables) &bull; <strong>JavaScript ES6+</strong> (Reactive State Engine)</span>
+      <a href="#code-architecture" class="announcement-link">Explore Code Architecture &rarr;</a>
+    </div>
+    <button class="announcement-close" id="closeAnnouncementBtn" aria-label="Dismiss banner">&times;</button>
+  </aside>
+
+  <!-- Main Site Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#nav-logo-grad)" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <path d="M16 8V16L23 20" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="16" cy="16" r="3" fill="#22d3ee" />
+            <defs>
+              <linearGradient id="nav-logo-grad" x1="4" y1="2" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#10b981" />
+                <stop offset="1" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">Volt<span class="highlight">Cycle</span></span>
+          <span class="brand-tag">Pure Web Stack &bull; HTML5 &bull; CSS3 &bull; JS</span>
+        </div>
+      </a>
+
+      <!-- 5 Core Features Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">1. Home</a>
+        <a href="#guide" class="nav-link">2. E-Waste Guide</a>
+        <a href="#collection-centres" class="nav-link">3. Collection Centres</a>
+        <a href="#request-pickup" class="nav-link highlight-nav">4. Request Pickup</a>
+        <a href="#impact-dashboard" class="nav-link dashboard-nav">
+          <span>5. Impact Dashboard</span>
+          <span class="dashboard-badge-counter" id="navRequestCountBadge">148</span>
+        </a>
+        <a href="#code-architecture" class="nav-link tech-pill-nav">Code Architecture</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle dark/light visual theme"
+          title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+            </path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="#request-pickup" class="btn btn-primary" id="headerPickupCta">
+          <span>Book Free Pickup</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" class="btn-arrow">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         FEATURE 1: HOME PAGE — Introduces the E-Waste Problem
+         ==================================================================== -->
+    <section class="section home-section" id="home">
+      <div class="ambient-glow glow-1"></div>
+      <div class="ambient-glow glow-2"></div>
+
+      <div class="container">
+        <!-- Hero Introduction -->
+        <div class="home-hero-grid">
+          <div class="home-hero-text">
+            <div class="feature-tag-pill">
+              <span class="dot-indicator"></span>
+              <span>Feature 1 &bull; The Global E-Waste Problem</span>
+            </div>
+            <h1 class="hero-headline">
+              The E-Waste Crisis: <span class="text-gradient">Why Discarded Electronics Threaten Our Planet</span>
+            </h1>
+            <p class="hero-lead">
+              E-waste is the world's fastest-growing solid waste stream. When electronics are thrown into common trash,
+              <strong>toxic heavy metals</strong> leach into drinking aquifers, and <strong>$62 billion in critical
+                precious metals</strong> are buried forever in landfills.
+            </p>
+            <div class="hero-actions-row">
+              <a href="#request-pickup" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg-icon">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                Request Pickup Form
+              </a>
+              <a href="#guide" class="btn btn-secondary btn-lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-svg-icon">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                View E-Waste Guide
+              </a>
+            </div>
+          </div>
+
+          <!-- Live Real-Time Ticker & Scientific Baseline -->
+          <div class="home-hero-visual">
+            <div class="crisis-card glass-panel">
+              <div class="crisis-header">
+                <span class="live-pill">REAL-TIME ESTIMATION</span>
+                <span class="source-tag">UN Global E-Waste Monitor 2024</span>
+              </div>
+              <span class="crisis-label">Global E-Waste Generated This Year</span>
+              <div class="crisis-number-wrap">
+                <span class="crisis-digits" id="liveTonnesTicker">48,932,180</span>
+                <span class="crisis-unit">Tonnes</span>
+              </div>
+              <p class="crisis-desc">
+                Piling up at <strong>~1.96 metric tonnes per second</strong> (62 million tonnes yearly). Only
+                <strong>22.3%</strong> is formally collected and recycled under certified ecological standards.
+              </p>
+
+              <!-- Recycled vs Lost Split -->
+              <div class="split-bar-box">
+                <div class="split-bar-header">
+                  <span class="text-emerald">22.3% Formally Recycled</span>
+                  <span class="text-rose">77.7% Burned, Dumped, or Landfilled</span>
+                </div>
+                <div class="split-track">
+                  <div class="split-fill recycled" style="width: 22.3%"></div>
+                  <div class="split-fill lost" style="width: 77.7%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Core Dimensions of the E-Waste Problem -->
+        <div class="home-breakdown-box">
+          <div class="section-heading-mini text-center">
+            <h2 class="subheading-title">Why E-Waste Cannot Go into Regular Trash</h2>
+            <p class="subheading-lead">Three fundamental scientific realities explaining why certified circular
+              disposition is vital:</p>
+          </div>
+
+          <div class="problem-pillars-grid">
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon icon-red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <h3 class="pillar-title">1. Toxic Heavy Metal Leaching</h3>
+              <p class="pillar-text">
+                Circuit boards and screens contain <strong>Lead, Mercury, and Cadmium</strong>. Landfill leachate
+                carries these carcinogenic neurotoxins directly into soil and drinking water aquifers.
+              </p>
+            </div>
+
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon icon-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                  </path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                </svg>
+              </div>
+              <h3 class="pillar-title">2. Fire & Explosion Hazards</h3>
+              <p class="pillar-text">
+                Discarded <strong>Lithium-ion batteries</strong> in phones, laptops, and power tools experience violent
+                thermal runaway fires when compressed inside municipal garbage compactor trucks.
+              </p>
+            </div>
+
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon icon-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <h3 class="pillar-title">3. $62 Billion in Lost Minerals</h3>
+              <p class="pillar-text">
+                Recycling 1 million smartphones yields <strong>34 kg of gold, 350 kg of silver, and 16,000 kg of
+                  copper</strong>. Urban mining prevents catastrophic virgin mining and habitat loss.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Toxic Hazards Inspector -->
+        <div class="toxic-inspector-box glass-panel" style="margin-top: 36px;">
+          <div class="inspector-header">
+            <div>
+              <h3 class="box-title">Chemical Hazards Matrix</h3>
+              <p class="box-subtitle">Click an element to inspect where it is hidden inside electronics and its
+                biological health impact:</p>
+            </div>
+          </div>
+          <div class="hazard-chips-row" id="hazardChipsRow">
+            <!-- Populated by JS -->
+          </div>
+          <div class="hazard-detail-display" id="hazardDetailDisplay">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Interactive Device Anatomy Exploder -->
+        <div class="anatomy-box glass-panel" style="margin-top: 36px;">
+          <div class="inspector-header">
+            <div>
+              <span class="badge-pill">Interactive Anatomy Exploder</span>
+              <h3 class="box-title" style="margin-top: 6px;">What's Inside Your Old Electronics?</h3>
+              <p class="box-subtitle">Select a hardware category to inspect recoverable precious elements vs dangerous
+                toxic components:</p>
+            </div>
+            <div class="anatomy-tabs" id="anatomyTabs">
+              <button class="btn btn-sm btn-secondary active" data-device="smartphone">Smartphone</button>
+              <button class="btn btn-sm btn-secondary" data-device="laptop">Laptop</button>
+              <button class="btn btn-sm btn-secondary" data-device="television">TV / Monitor</button>
+            </div>
+          </div>
+          <div class="anatomy-content-wrap" id="anatomyDisplayWrap">
+            <!-- Populated by JS based on DEVICE_ANATOMY dataset -->
+          </div>
+        </div>
+
+        <!-- Personal Ecological Footprint Calculator -->
+        <div class="footprint-calc-box glass-panel" style="margin-top: 36px;">
+          <div class="inspector-header">
+            <div>
+              <span class="badge-pill">Personal Impact Estimator</span>
+              <h3 class="box-title" style="margin-top: 6px;">How Much Hidden Wealth & Pollution Is in Your Drawers?</h3>
+              <p class="box-subtitle">Adjust the sliders for electronics currently sitting unused in your home or
+                office:</p>
+            </div>
+          </div>
+          <div class="calc-grid">
+            <div class="calc-sliders-col">
+              <div class="calc-slider-group">
+                <div class="slider-header">
+                  <span>Unused Smartphones & Tablets:</span>
+                  <strong class="text-emerald" id="calcValPhones">2</strong>
+                </div>
+                <input type="range" min="0" max="15" value="2" class="calc-range" id="rangePhones">
+              </div>
+              <div class="calc-slider-group">
+                <div class="slider-header">
+                  <span>Old Laptops & Desktops:</span>
+                  <strong class="text-cyan" id="calcValComputers">1</strong>
+                </div>
+                <input type="range" min="0" max="10" value="1" class="calc-range" id="rangeComputers">
+              </div>
+              <div class="calc-slider-group">
+                <div class="slider-header">
+                  <span>Cables, Adapters & Peripherals:</span>
+                  <strong class="text-amber" id="calcValCables">5</strong>
+                </div>
+                <input type="range" min="0" max="30" value="5" class="calc-range" id="rangeCables">
+              </div>
+            </div>
+            <div class="calc-results-col">
+              <div class="calc-stat-pill">
+                <span class="cs-label">Recoverable Gold (Au):</span>
+                <strong class="cs-num text-emerald" id="calcGoldYield">0.19 grams</strong>
+              </div>
+              <div class="calc-stat-pill">
+                <span class="cs-label">Recoverable Copper (Cu):</span>
+                <strong class="cs-num text-cyan" id="calcCopperYield">1,000 grams</strong>
+              </div>
+              <div class="calc-stat-pill">
+                <span class="cs-label">CO2 Emissions Prevented:</span>
+                <strong class="cs-num text-amber" id="calcCo2Avoided">42.5 kg CO2e</strong>
+              </div>
+              <a href="#request-pickup" class="btn btn-primary w-full" style="margin-top: 12px;">
+                Donate / Dispose These Items Now &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURE 2: E-WASTE GUIDE — Explains Which Items Can Be Recycled
+         ==================================================================== -->
+    <section class="section guide-section" id="guide">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Feature 2 &bull; What Can Be Recycled</span>
+          </div>
+          <h2 class="section-title">E-Waste Recycling Guide</h2>
+          <p class="section-subtitle">
+            Not all tech is treated equally. Browse our verified guide to check recyclable categories, recoverable
+            materials, and mandatory safe handling steps.
+          </p>
+        </div>
+
+        <!-- Guide Category Filter Bar -->
+        <div class="guide-filter-bar glass-panel">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-svg">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="guideSearchInput"
+              placeholder="Search any device (e.g. laptop, phone, battery, charger, microwave)..."
+              class="guide-search-field">
+          </div>
+          <div class="filter-chips-list" id="guideFilterChips">
+            <button class="chip-filter active" data-filter="all">All Items</button>
+            <button class="chip-filter" data-filter="mobile">Smartphones & Tablets</button>
+            <button class="chip-filter" data-filter="computing">Computers & Laptops</button>
+            <button class="chip-filter" data-filter="accessories">Cables & Peripherals</button>
+            <button class="chip-filter" data-filter="batteries">Batteries</button>
+            <button class="chip-filter" data-filter="appliances">Home Appliances</button>
+            <button class="chip-filter" data-filter="prohibited">Non-Acceptable</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Items Grid -->
+        <div class="guide-items-grid" id="guideItemsGrid">
+          <!-- Rendered dynamically by app.js based on GUIDE_ITEMS dataset -->
+        </div>
+
+        <!-- Pre-Disposal Precautions Banner -->
+        <div class="guide-rules-banner glass-panel">
+          <div class="banner-col">
+            <span class="rule-badge-check">&#10003; Essential Pre-Disposal Rule</span>
+            <h4 class="rule-title">Data Sanitization (NIST SP 800-88) & Terminal Taping</h4>
+            <p class="rule-desc">
+              Always factory reset devices, log out of cloud locks, and tape exposed lithium-ion battery terminals with
+              non-conductive electrical tape before collection.
+            </p>
+          </div>
+          <div class="banner-cta">
+            <a href="#request-pickup" class="btn btn-primary">Ready to Recycle? Request Pickup &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Interactive Myth vs Fact Quiz -->
+        <div class="myth-quiz-card glass-panel" style="margin-top: 36px; padding: 28px;">
+          <div class="inspector-header">
+            <div>
+              <span class="badge-pill">Interactive Knowledge Check</span>
+              <h3 class="box-title" style="margin-top: 6px;">E-Waste Myth Busters</h3>
+              <p class="box-subtitle">Test your understanding of electronics disposal reality:</p>
+            </div>
+            <div class="quiz-score-badge" id="quizScoreBadge">Score: 0 / 3</div>
+          </div>
+          <div class="quiz-questions-wrap" id="quizQuestionsWrap">
+            <!-- Populated dynamically by app.js based on MYTH_QUIZ dataset -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURE 3: COLLECTION CENTRE INFORMATION — Displays Verified Details
+         ==================================================================== -->
+    <section class="section centres-section" id="collection-centres">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Feature 3 &bull; Verified Physical Drop-Offs</span>
+          </div>
+          <h2 class="section-title">Verified E-Waste Collection Centres</h2>
+          <p class="section-subtitle">
+            Need to drop off electronics in person? All facilities below are certified under <strong>KSPCB, CPCB, R2v3,
+              or
+              e-Stewards</strong> standards with verified zero-landfill downstream processing across Bangalore and
+            Karnataka.
+          </p>
+        </div>
+
+        <!-- Hub Search & City Filter Bar -->
+        <div class="hub-search-toolbar glass-panel">
+          <div class="search-input-wrap" style="flex: 1;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-svg">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <input type="text" id="hubSearchInput"
+              placeholder="Filter centres by locality or item (e.g. Bangalore, Peenya, Whitefield, Koramangala, Laptops)..."
+              class="guide-search-field">
+          </div>
+          <div class="hub-city-pills" id="hubCityPills">
+            <button class="chip-filter active" data-city="all">All Locations</button>
+            <button class="chip-filter" data-city="Bangalore">Bangalore (All)</button>
+            <button class="chip-filter" data-city="Peenya">Peenya</button>
+            <button class="chip-filter" data-city="Whitefield">Whitefield</button>
+            <button class="chip-filter" data-city="Electronic City">Electronic City</button>
+            <button class="chip-filter" data-city="Koramangala">Koramangala</button>
+            <button class="chip-filter" data-city="Hebbal">Hebbal</button>
+            <button class="chip-filter" data-city="Indiranagar">Indiranagar</button>
+            <button class="chip-filter" data-city="Mysore Road">Mysore Road</button>
+          </div>
+        </div>
+
+        <!-- Collection Centres Grid -->
+        <div class="centres-grid" id="centresGrid">
+          <!-- Rendered dynamically by app.js based on COLLECTION_CENTRES dataset -->
+        </div>
+
+        <!-- Doorstep Alternative Banner -->
+        <div class="centre-info-footer glass-panel">
+          <div class="info-footer-content">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div>
+              <h4 class="footer-note-title">Too heavy to transport or no vehicle available?</h4>
+              <p class="footer-note-sub">
+                Submit a disposal request below &mdash; our certified collection team will pick up your electronics
+                straight from your doorstep!
+              </p>
+            </div>
+          </div>
+          <a href="#request-pickup" class="btn btn-secondary">Request Doorstep Pickup</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURE 4: REQUEST PICKUP — Pure Web Application Disposal Form
+         ==================================================================== -->
+    <section class="section pickup-section" id="request-pickup">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Feature 4 &bull; Doorstep Disposal Portal</span>
+          </div>
+          <h2 class="section-title">Submit E-Waste Disposal Request</h2>
+          <p class="section-subtitle">
+            Fill in your contact details and device counts below. Every request is recorded and instantly updates the
+            <strong>Impact Dashboard</strong> in real time.
+          </p>
+        </div>
+
+        <div class="pickup-card-container glass-panel">
+          <!-- Disposal Request Submission Form -->
+          <form id="disposalRequestForm" class="pickup-form" novalidate>
+            <div class="form-section-title">
+              <span class="step-num">1</span>
+              <span>Contact & Pickup Address Details</span>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label for="userName" class="field-label">Full Name *</label>
+                <input type="text" id="userName" class="field-input" placeholder="e.g. Alex Johnson" required>
+                <span class="error-msg" id="errName">Please enter your name</span>
+              </div>
+              <div class="input-group">
+                <label for="userEmail" class="field-label">Email Address (for certificate) *</label>
+                <input type="email" id="userEmail" class="field-input" placeholder="alex@example.com" required>
+                <span class="error-msg" id="errEmail">Please enter a valid email</span>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label for="userPhone" class="field-label">Phone Number *</label>
+                <input type="tel" id="userPhone" class="field-input" placeholder="+91 98765 43210" required>
+                <span class="error-msg" id="errPhone">Please enter a valid phone number</span>
+              </div>
+              <div class="input-group">
+                <label for="userLocationType" class="field-label">Location Type</label>
+                <select id="userLocationType" class="field-select">
+                  <option value="Residential">Residential Home / Apartment</option>
+                  <option value="Commercial">Commercial Office / Workplace</option>
+                  <option value="Educational">Educational Institution</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="userAddress" class="field-label">Street Address & Landmark *</label>
+              <input type="text" id="userAddress" class="field-input"
+                placeholder="Building name, street, locality (e.g. Koramangala, Whitefield, Indiranagar)" required>
+              <span class="error-msg" id="errAddress">Please enter your street address</span>
+            </div>
+
+            <div class="form-row-3">
+              <div class="input-group">
+                <label for="userCity" class="field-label">City *</label>
+                <input type="text" id="userCity" class="field-input" placeholder="e.g. Bangalore" required>
+                <span class="error-msg" id="errCity">City is required</span>
+              </div>
+              <div class="input-group">
+                <label for="userState" class="field-label">State / Province *</label>
+                <input type="text" id="userState" class="field-input" placeholder="e.g. Karnataka" required>
+                <span class="error-msg" id="errState">State is required</span>
+              </div>
+              <div class="input-group">
+                <label for="userZip" class="field-label">Postal / PIN Code *</label>
+                <input type="text" id="userZip" class="field-input" placeholder="e.g. 560001" required>
+                <span class="error-msg" id="errZip">PIN code is required</span>
+              </div>
+            </div>
+
+            <!-- Section 2: Items to Dispose -->
+            <div class="form-section-title" style="margin-top: 30px;">
+              <span class="step-num">2</span>
+              <span>Select Electronic Items to Dispose</span>
+            </div>
+
+            <div class="items-picker-grid">
+              <div class="picker-item-card">
+                <span class="p-title">Smartphones & Tablets</span>
+                <span class="p-sub">~0.2 kg each</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyPhones" data-delta="-1">-</button>
+                  <input type="number" id="qtyPhones" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyPhones" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="picker-item-card">
+                <span class="p-title">Laptops & Desktops</span>
+                <span class="p-sub">~2.5 kg each</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyComputers" data-delta="-1">-</button>
+                  <input type="number" id="qtyComputers" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyComputers" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="picker-item-card">
+                <span class="p-title">Monitors & Televisions</span>
+                <span class="p-sub">~4.8 kg each</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyMonitors" data-delta="-1">-</button>
+                  <input type="number" id="qtyMonitors" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyMonitors" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="picker-item-card">
+                <span class="p-title">Cables, Chargers & Mice</span>
+                <span class="p-sub">~0.15 kg each</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyCables" data-delta="-1">-</button>
+                  <input type="number" id="qtyCables" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyCables" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="picker-item-card">
+                <span class="p-title">Small Home Appliances</span>
+                <span class="p-sub">~2.2 kg each</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyAppliances" data-delta="-1">-</button>
+                  <input type="number" id="qtyAppliances" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyAppliances" data-delta="1">+</button>
+                </div>
+              </div>
+
+              <div class="picker-item-card">
+                <span class="p-title">Loose Lithium Batteries</span>
+                <span class="p-sub">~0.3 kg each (Taped)</span>
+                <div class="p-counter">
+                  <button type="button" class="btn-step-qty" data-field="qtyBatteries" data-delta="-1">-</button>
+                  <input type="number" id="qtyBatteries" class="qty-num" value="0" min="0" max="99">
+                  <button type="button" class="btn-step-qty" data-field="qtyBatteries" data-delta="1">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Manifest Ticker -->
+            <div class="form-manifest-summary">
+              <div>
+                <span class="summary-label">Total Devices:</span>
+                <strong class="summary-val text-emerald" id="formItemsCount">0 items</strong>
+              </div>
+              <div>
+                <span class="summary-label">Estimated Mass:</span>
+                <strong class="summary-val text-cyan" id="formEstimatedWeight">0.0 kg</strong>
+              </div>
+              <span class="items-warn-msg" id="errItems">Please select at least 1 item</span>
+            </div>
+
+            <!-- Section 3: Scheduling & Compliance -->
+            <div class="form-section-title" style="margin-top: 30px;">
+              <span class="step-num">3</span>
+              <span>Pickup Date & Safety Acknowledgments</span>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label for="userPickupDate" class="field-label">Preferred Date *</label>
+                <input type="date" id="userPickupDate" class="field-input" required>
+              </div>
+              <div class="input-group">
+                <label for="userTimeSlot" class="field-label">Preferred Time Window</label>
+                <select id="userTimeSlot" class="field-select">
+                  <option value="Morning (09:00 AM – 01:00 PM)">Morning (09:00 AM – 01:00 PM)</option>
+                  <option value="Afternoon (01:00 PM – 05:00 PM)">Afternoon (01:00 PM – 05:00 PM)</option>
+                  <option value="Evening (05:00 PM – 08:00 PM)">Evening (05:00 PM – 08:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="compliance-box">
+              <label class="custom-chk">
+                <input type="checkbox" id="chkNistAudit" checked>
+                <span class="chk-text">
+                  <strong>Request Certified NIST SP 800-88 Data Sanitization</strong>
+                  <small>Drives & memory chips will be cryptographically erased or physically shredded.</small>
+                </span>
+              </label>
+
+              <label class="custom-chk">
+                <input type="checkbox" id="chkTapedTerminals" checked>
+                <span class="chk-text">
+                  <strong>Battery Safety Declaration</strong>
+                  <small>Loose battery terminals are taped to prevent short-circuit sparks in transit.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-lg w-full" id="submitPickupBtn">
+                <span class="btn-spinner" id="formSpinner" style="display: none;"></span>
+                <span id="submitBtnLabel">Submit Disposal Request & Record on Dashboard</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Post-Submission Digital Confirmation Slip -->
+          <div class="submission-success-view" id="submissionSuccessView" style="display: none;">
+            <div class="success-banner-top">
+              <div class="check-circle-icon">&#10003;</div>
+              <h3 class="success-headline">Disposal Request Successfully Submitted!</h3>
+              <p class="success-sub">
+                Your request has been verified and permanently recorded on the <strong>Impact Dashboard</strong>. A
+                certified collection courier has been queued for your pickup window.
+              </p>
+            </div>
+
+            <div class="success-receipt-card glass-panel">
+              <div class="receipt-top-row">
+                <div>
+                  <span class="receipt-mini-tag">Official Disposal Manifest</span>
+                  <div class="receipt-id-text">Tracking ID: <span class="text-emerald"
+                      id="confirmedTrackId">REQ-2026-149</span></div>
+                </div>
+                <div class="qr-preview-box" id="confirmedQrBox"></div>
+              </div>
+
+              <div class="receipt-details-list">
+                <div class="detail-line">
+                  <span class="d-label">Name:</span>
+                  <span class="d-val" id="confirmedName">Alex Johnson</span>
+                </div>
+                <div class="detail-line">
+                  <span class="d-label">Pickup Address:</span>
+                  <span class="d-val" id="confirmedAddress"><a
+                      href="https://www.google.com/maps/search/?api=1&query=No.+42%2C+100+Feet+Road%2C+Indiranagar%2C+Bangalore%2C+Karnataka+-+560038"
+                      target="_blank" rel="noopener noreferrer" class="c-address-link" title="Open in Google Maps">No.
+                      42, 100 Feet Road, Indiranagar, Bangalore, Karnataka - 560038</a></span>
+                </div>
+                <div class="detail-line">
+                  <span class="d-label">Scheduled Date:</span>
+                  <span class="d-val" id="confirmedDate">Tomorrow, Morning</span>
+                </div>
+                <div class="detail-line">
+                  <span class="d-label">Items Manifest:</span>
+                  <span class="d-val text-emerald" id="confirmedItems">3x Smartphones, 1x Laptop</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="success-actions-row">
+              <a href="#impact-dashboard" class="btn btn-primary" id="viewOnDashboardBtn">
+                View Updated Count on Impact Dashboard &rarr;
+              </a>
+              <button type="button" class="btn btn-secondary" id="submitAnotherReqBtn">
+                Submit Another Request
+              </button>
+              <button type="button" class="btn btn-outline" id="printReceiptBtn">
+                Print Manifest Slip
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURE 5: IMPACT DASHBOARD — Displays Number of Requests Received
+         ==================================================================== -->
+    <section class="section dashboard-section" id="impact-dashboard">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Feature 5 &bull; Real-time Transparency</span>
+          </div>
+          <h2 class="section-title">Community E-Waste Impact Dashboard</h2>
+          <p class="section-subtitle">
+            Live transparent metrics displaying the exact <strong>number of requests received</strong>, total gadgets
+            collected, and landfill diversion achieved to date.
+          </p>
+        </div>
+
+        <!-- Primary KPI Metrics Grid: Prominently Displays Number of Requests Received -->
+        <div class="impact-kpi-grid">
+          <!-- KPI 1: Primary Requirement: Displays Number of Requests Received -->
+          <div class="kpi-card glass-panel highlight-kpi">
+            <div class="kpi-icon-wrap icon-emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="kpi-metric-info">
+              <span class="kpi-label">TOTAL REQUESTS RECEIVED</span>
+              <div class="kpi-big-number text-gradient" id="dashTotalRequests">148</div>
+              <span class="kpi-subtext text-emerald">&#10003; Real-time verified count</span>
+            </div>
+          </div>
+
+          <!-- KPI 2: Total Items -->
+          <div class="kpi-card glass-panel">
+            <div class="kpi-icon-wrap icon-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="kpi-metric-info">
+              <span class="kpi-label">DEVICES COLLECTED</span>
+              <div class="kpi-big-number" id="dashTotalDevices">1,140</div>
+              <span class="kpi-subtext">Gadgets diverted from garbage</span>
+            </div>
+          </div>
+
+          <!-- KPI 3: Weight Diverted -->
+          <div class="kpi-card glass-panel">
+            <div class="kpi-icon-wrap icon-amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <div class="kpi-metric-info">
+              <span class="kpi-label">E-WASTE DIVERTED (KG)</span>
+              <div class="kpi-big-number" id="dashTotalWeight">4,890.5</div>
+              <span class="kpi-subtext">Safely processed mass</span>
+            </div>
+          </div>
+
+          <!-- KPI 4: Precious Metals Saved -->
+          <div class="kpi-card glass-panel">
+            <div class="kpi-icon-wrap icon-gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v12M8 10h8"></path>
+              </svg>
+            </div>
+            <div class="kpi-metric-info">
+              <span class="kpi-label">METALS RECOVERED</span>
+              <div class="kpi-big-number" id="dashTotalMetals">98.4g / 412kg</div>
+              <span class="kpi-subtext">Gold (Au) / Copper (Cu)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Distribution of Disposed Electronics -->
+        <div class="category-breakdown-card glass-panel" style="margin-bottom: 32px; padding: 28px;">
+          <h3 class="stream-title" style="margin-bottom: 8px;">Breakdown of Electronics Disposed</h3>
+          <p class="stream-sub" style="margin-bottom: 20px;">Distribution across all registered pickup requests:</p>
+          <div class="category-bars-row" id="categoryBarsContainer">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Live Submissions Stream / Feed -->
+        <div class="dashboard-stream-box glass-panel">
+          <div class="stream-header">
+            <div>
+              <h3 class="stream-title">Recent Disposal Requests Stream</h3>
+              <p class="stream-sub">Real-time log of community requests. When you submit a request, it instantly appears
+                below.</p>
+            </div>
+            <div class="stream-header-actions">
+              <button class="btn btn-secondary btn-sm" id="btnExportCsv" title="Export to CSV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="width: 16px; height: 16px;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export CSV
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnExportJson" title="Export JSON Manifest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="width: 16px; height: 16px;">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Export JSON
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnResetData" title="Seed Fresh Sample Requests">
+                Reset Demo
+              </button>
+              <span class="stream-badge-live">
+                <span class="pulse-dot"></span>
+                <span>LIVE FEED UPDATING</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="stream-filter-row" style="margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <div class="search-input-wrap" style="flex: 1; min-width: 200px;">
+              <input type="text" id="streamSearchInput" placeholder="Filter stream by ID, name, or city..."
+                class="guide-search-field" style="padding: 8px 14px; font-size: 0.85rem;">
+            </div>
+            <div class="stream-status-filter-pills" id="streamStatusPills">
+              <button class="chip-filter active" data-status="all">All Statuses</button>
+              <button class="chip-filter" data-status="Scheduled">Scheduled</button>
+              <button class="chip-filter" data-status="Transit">In Transit</button>
+              <button class="chip-filter" data-status="Recycled">Recycled</button>
+            </div>
+          </div>
+
+          <div class="stream-table-wrap">
+            <table class="stream-table">
+              <thead>
+                <tr>
+                  <th>Request ID</th>
+                  <th>Consignor</th>
+                  <th>Location</th>
+                  <th>Items Disposed</th>
+                  <th>Est. Mass</th>
+                  <th>Date & Time</th>
+                  <th>Current Status</th>
+                </tr>
+              </thead>
+              <tbody id="dashboardRequestsTableBody">
+                <!-- Dynamically populated from data and localStorage submissions -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: CODE ARCHITECTURE HUB — COMBINING THE CODING LANGUAGES
+         ==================================================================== -->
+    <section class="section code-architecture-section" id="code-architecture">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Web Trifecta Architecture</span>
+          </div>
+          <h2 class="section-title">How the Coding Languages Combine</h2>
+          <p class="section-subtitle">
+            VoltCycle unites <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong> into
+            a high-performance, single-bundle web application without heavyweight framework bloat.
+          </p>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="code-pillars-grid">
+          <div class="code-pillar-card glass-panel">
+            <div class="pillar-lang-badge html-badge">HTML5</div>
+            <h3 class="pillar-title">1. Structure & Semantics</h3>
+            <p class="pillar-desc">
+              Constructs the semantic hierarchy using accessible landmarks (<code>&lt;header&gt;</code>,
+              <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>,
+              <code>&lt;footer&gt;</code>), native form controls with ARIA validation, and scalable vector SVG
+              illustrations.
+            </p>
+            <ul class="pillar-features-list">
+              <li>&bull; Accessible form elements & labels</li>
+              <li>&bull; Pure procedural SVG graphics</li>
+              <li>&bull; SEO-optimized heading structure</li>
+            </ul>
+          </div>
+
+          <div class="code-pillar-card glass-panel">
+            <div class="pillar-lang-badge css-badge">CSS3</div>
+            <h3 class="pillar-title">2. Styling & Glassmorphism</h3>
+            <p class="pillar-desc">
+              Powers responsive layouts with CSS Grid and Flexbox, custom property tokens (<code>:root</code>),
+              backdrop-filter frosted glassmorphism, dynamic dark/light eco-themes, and fluid micro-animations.
+            </p>
+            <ul class="pillar-features-list">
+              <li>&bull; Custom CSS variables system</li>
+              <li>&bull; Frosted glassmorphism panels</li>
+              <li>&bull; Seamless dark/light theme engine</li>
+            </ul>
+          </div>
+
+          <div class="code-pillar-card glass-panel">
+            <div class="pillar-lang-badge js-badge">JavaScript ES6+</div>
+            <h3 class="pillar-title">3. Logic & Reactive Engine</h3>
+            <p class="pillar-desc">
+              Drives the real-time ticking math, dynamic mass and precious metal estimation, procedural QR generation,
+              client-side CSV downloads, and instant localStorage synchronization with the Impact Dashboard.
+            </p>
+            <ul class="pillar-features-list">
+              <li>&bull; UN e-waste ticker animation loop</li>
+              <li>&bull; Reactive state store with localStorage</li>
+              <li>&bull; Procedural SVG QR code synthesizer</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interactive Live Code Viewer -->
+        <div class="code-viewer-panel glass-panel" style="margin-top: 36px;">
+          <div class="code-viewer-header">
+            <div class="code-tabs" id="codeViewerTabs">
+              <button class="code-tab-btn active" data-lang="html">HTML5 Template</button>
+              <button class="code-tab-btn" data-lang="css">CSS3 Design System</button>
+              <button class="code-tab-btn" data-lang="js">JavaScript Reactive State</button>
+            </div>
+            <button class="btn btn-sm btn-outline" id="btnCopySnippet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="width: 14px; height: 14px;">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <div class="code-viewer-body">
+            <div class="code-info-meta" id="codeInfoMeta">
+              <!-- Dynamically populated based on CODE_SHOWCASE -->
+            </div>
+            <pre
+              class="code-pre"><code class="code-snippet-block" id="codeSnippetTarget"><!-- Code populated by JS --></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: PRESENTATION DECK & POSTER STUDIO
+         ==================================================================== -->
+    <section class="section studio-section" id="presentation-studio">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="feature-tag-pill">
+            <span class="dot-indicator"></span>
+            <span>Presentation & Poster Studio</span>
+          </div>
+          <h2 class="section-title">VoltCycle Presentation Deck & Poster</h2>
+          <p class="section-subtitle">
+            An interactive 7-slide pitch deck and downloadable awareness poster built directly into the codebase.
+          </p>
+        </div>
+
+        <div class="studio-grid">
+          <!-- Interactive 7-Slide Pitch Deck -->
+          <div class="slide-deck-viewer glass-panel">
+            <div class="deck-top-bar">
+              <span class="deck-badge" id="slideTagBadge">1 / 7 &bull; Introduction</span>
+              <span class="deck-brand">Pure Code Architecture</span>
+            </div>
+
+            <div class="deck-slide-content" id="activeSlideContent">
+              <!-- Dynamically populated by JS based on PRESENTATION_SLIDES dataset -->
+            </div>
+
+            <div class="deck-controls-row">
+              <button class="btn btn-outline" id="btnPrevSlide" disabled>&larr; Previous Slide</button>
+              <div class="deck-dots" id="deckDotsWrap"></div>
+              <button class="btn btn-primary" id="btnNextSlide">Next Slide &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Printable Awareness Poster Card -->
+          <div class="poster-preview-card glass-panel">
+            <div class="poster-inner">
+              <div class="poster-header-box">
+                <span class="poster-org-tag">CIRCULAR TECH INITIATIVE</span>
+                <h3 class="poster-main-title">DON'T TRASH IT.<br><span class="text-gradient">RECYCLE CLEAN!</span></h3>
+                <p class="poster-sub">VoltCycle Community E-Waste Disposal Platform</p>
+              </div>
+
+              <div class="poster-stats-box">
+                <div class="p-stat-item">
+                  <span class="p-stat-num">62 Mt</span>
+                  <span class="p-stat-lbl">Annual E-Waste</span>
+                </div>
+                <div class="p-stat-item">
+                  <span class="p-stat-num">22.3%</span>
+                  <span class="p-stat-lbl">Recycled</span>
+                </div>
+                <div class="p-stat-item">
+                  <span class="p-stat-num">$62B</span>
+                  <span class="p-stat-lbl">Lost Minerals</span>
+                </div>
+              </div>
+
+              <div class="poster-qr-section">
+                <div class="poster-qr-box">
+                  <svg viewBox="0 0 56 56" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="16" height="16" fill="#0f172a" rx="2" />
+                    <rect x="4" y="4" width="8" height="8" fill="#ffffff" rx="1" />
+                    <rect x="40" y="0" width="16" height="16" fill="#0f172a" rx="2" />
+                    <rect x="44" y="4" width="8" height="8" fill="#ffffff" rx="1" />
+                    <rect x="0" y="40" width="16" height="16" fill="#0f172a" rx="2" />
+                    <rect x="4" y="44" width="8" height="8" fill="#ffffff" rx="1" />
+                    <rect x="24" y="8" width="8" height="8" fill="#0f172a" rx="1" />
+                    <rect x="24" y="24" width="8" height="8" fill="#10b981" rx="1" />
+                    <rect x="40" y="24" width="8" height="8" fill="#0f172a" rx="1" />
+                    <rect x="8" y="24" width="8" height="8" fill="#0f172a" rx="1" />
+                    <rect x="24" y="40" width="8" height="8" fill="#0f172a" rx="1" />
+                    <rect x="40" y="40" width="8" height="8" fill="#0f172a" rx="1" />
+                  </svg>
+                </div>
+                <div class="poster-qr-cta">
+                  <strong>Scan QR Code</strong>
+                  <p>Book a free doorstep pickup in under 60 seconds.</p>
+                </div>
+              </div>
+
+              <div class="poster-action-footer">
+                <button class="btn btn-secondary w-full" id="btnPrintPoster">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="width: 16px; height: 16px;">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  Print / Save Poster
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Comprehensive Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content-row">
+      <div class="footer-left">
+        <div class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M16 8V16L23 20" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span class="brand-name">Volt<span class="highlight">Cycle</span></span>
+        </div>
+        <p class="footer-blurb">
+          A full-stack e-waste management solution built with modern JavaScript, CSS, and HTML5. Dedicated to
+          zero-landfill electronic disposition.
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="f-nav-title">Features</h4>
+        <ul class="f-links">
+          <li><a href="#home">1. Home Page (Problem)</a></li>
+          <li><a href="#guide">2. E-Waste Guide</a></li>
+          <li><a href="#collection-centres">3. Collection Centres</a></li>
+          <li><a href="#request-pickup">4. Request Pickup</a></li>
+          <li><a href="#impact-dashboard">5. Impact Dashboard</a></li>
+          <li><a href="#code-architecture">6. Code Architecture</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="f-nav-title">Compliance</h4>
+        <ul class="f-links">
+          <li><span>R2v3 Certified Downstream</span></li>
+          <li><span>NIST SP 800-88 Data Sanitization</span></li>
+          <li><span>UN E-Waste Monitor Baseline</span></li>
+          <li><span>Zero Toxic Landfill Policy</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container copyright-flex">
+        <p>&copy; 2026 VoltCycle E-Waste Management Solution. Engineered with pure HTML5, CSS3, and JavaScript ES6+.</p>
+        <span class="compliance-badge-ft">HTML5 &bull; CSS3 &bull; Vanilla JavaScript ES6+</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
